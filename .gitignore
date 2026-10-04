@@ -1,0 +1,14 @@
+#CodeLite
+.codelite/
+*.workspace
+*.session
+*.tags
+*.project
+
+#Build Files
+build/
+bin/
+obj/
+
+#macOS
+.DS_Store

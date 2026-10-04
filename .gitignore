@@ -10,5 +10,9 @@ build/
 bin/
 obj/
 
+#Generated Files
+.cache/
+compile_commands.json
+
 #macOS
 .DS_Store

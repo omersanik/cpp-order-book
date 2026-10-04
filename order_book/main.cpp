@@ -1,26 +1,18 @@
-#include "MainFrame.hpp"
-#include <wx/app.h>
-#include <wx/event.h>
-#include <wx/image.h>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <iomanip>
 
-// Define the MainApp
-class MainApp : public wxApp
-{
-public:
-    MainApp() = default;
-    ~MainApp() override = default;
-
-    bool OnInit() override
-    {
-        // Add the common image handlers
-        wxImage::AddHandler(new wxPNGHandler);
-        wxImage::AddHandler(new wxJPEGHandler);
-
-        MainFrame* mainFrame = new MainFrame{ nullptr };
-        SetTopWindow(mainFrame);
-        return GetTopWindow()->Show();
-    }
+class OrderBook{
+        public:
+            //Enumarations for order types and sides
+            enum class OrderType {Market, Limit, Stop, GoodTillCancelled, FillOrKill_Limit};
+            enum class Side {Buy, Sell};
+            
+        class Order {`
+               public:
+                   Order(int id, OrderType type, Side side, double price, int quantity)
+                        :id(id), type(type), side(side), price(price), quantity(quantity) {}
+   };
 };
-
-DECLARE_APP(MainApp)
-IMPLEMENT_APP(MainApp)
